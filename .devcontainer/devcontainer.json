@@ -1,0 +1,27 @@
+{
+  "name": "ROS2 Dev Container",
+  "privileged": true,
+  "remoteUser": "vscode",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-themes",
+        "ms-vscode.cmake-tools",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "Ranch-Hand-Robotics.rde-pack",
+      ]
+    }
+  },
+  "runArgs": [
+    "--net=host"
+  ]
+}
