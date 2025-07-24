@@ -1,4 +1,4 @@
-ARG ROS_DISTRO=jazzy
+ARG ROS_DISTRO=rolling
 FROM ros:$ROS_DISTRO
 
 # Create a non-root user for the container
@@ -25,9 +25,6 @@ RUN apt-get install -y sudo \
 
 # Install OpenSSH
 RUN apt-get install -y openssh-client
-
-# Install rmw_zenoh
-RUN apt-get install -y ros-$ROS_DISTRO-rmw-zenoh-cpp
 
 # Install pip
 RUN apt-get install -y python3-pip
